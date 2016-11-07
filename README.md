@@ -37,11 +37,10 @@ new Vue({
 });
 ```
 
-Use CDN Script(ES5)
+Use Script(ES5)
 ```js
 
-// include the script ./node_modules/vue-core-image-upload/index.js
-<script src="http://s1.vued.vanthink.cn/3e3f5b16269d/vue-core-image-upload.js"></script>
+<script src="./node_modules/vue-core-image-upload/index.js"></script>
 ...
 <script>
     var MyComponent = Vue.extend(VueCoreImageUpload);
