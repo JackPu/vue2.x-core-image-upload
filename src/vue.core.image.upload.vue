@@ -649,8 +649,7 @@
             } else {
                 formatSize = options.maxFileSize.toFixed(2) + 'Byte';
             }
-            this.errorHandle('FILE IS TOO LARGER MAX FILE IS ' + formatSize);
-            return;
+            return this.__dispatch('errorHandle','SIZE ERROR');
         }
         
         this.files = e.target.files;
