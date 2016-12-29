@@ -109,7 +109,7 @@ errorhandle(err) {
 }
 ```
 ``` html
-<vue-core-image-upload v-bind:crop="false" url="./crop.php"  v-on:imageuploaded="imageuploaded" v-on:imageuploaded="imageuploaded" v-on:errorhandle="func"></vue-core-image-upload>
+<vue-core-image-upload v-bind:crop="false" url="./crop.php" v-on:imageuploaded="imageuploaded" v-on:errorhandle="func"></vue-core-image-upload>
 ```
 
 ### Server Crop Arguments
