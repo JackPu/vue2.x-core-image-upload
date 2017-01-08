@@ -1,17 +1,15 @@
 ## Vue-Core-Image-Upload 
-a vue plugin for image upload and crop ( Support 📱 IE9+)
+a vue plugin for image upload and crop ( Support 📱 IE9+);
 
-Vue.js>=2.0,
-this project will be merged to the [project](https://github.com/Vanthink-UED/vue-core-image-upload)
+this project has been merged to the [project](https://github.com/Vanthink-UED/vue-core-image-upload)
 
-<img width="360" src="./shots/CORE-IMAGE-UPLOAD-LOGO.png" />
+<img width="360" src="./shots/vue-core-image-upload.png" />
 
-if you use vue.js(1.x), you should go [here](https://github.com/Vanthink-UED/vue-core-image-upload)
 
 ### Install
 
 ``` bash
-npm i vue2.x-core-image-upload --save
+npm i vue-core-image-upload --save
 ```
 
 Code Example (ES6)
@@ -27,20 +25,23 @@ new Vue({
     src: 'http://img1.vued.vanthink.cn/vued0a233185b6027244f9d43e653227439a.png',
   },
   methods: {
-    imageUploaded(res) {
+
+  },
+  events: {
+    imageuploaded(res) {
       if (res.errcode == 0) {
         this.src = 'http://img1.vued.vanthink.cn/vued751d13a9cb5376b89cb6719e86f591f3.png';
       }
     }
   },
-
 });
 ```
 
-Use Script(ES5)
+Use CDN Script(ES5)
 ```js
 
-<script src="./node_modules/vue-core-image-upload/index.js"></script>
+// include the script ./node_modules/vue-core-image-upload/index.js
+<script src="http://s1.vued.vanthink.cn/3e3f5b16269d/vue-core-image-upload.js"></script>
 ...
 <script>
     var MyComponent = Vue.extend(VueCoreImageUpload);
@@ -53,7 +54,10 @@ Use Script(ES5)
         src: 'http://img1.vued.vanthink.cn/vued0a233185b6027244f9d43e653227439a.png',
       },
       methods: {
-        imageUploaded: function(res) {
+
+      },
+      events: {
+        imageuploaded: function(res) {
           if (res.errcode == 0) {
             this.src = 'http://img1.vued.vanthink.cn/vued751d13a9cb5376b89cb6719e86f591f3.png';
           }
@@ -64,7 +68,7 @@ Use Script(ES5)
 ```
 
 ``` html
-<vue-core-image-upload v-bind:class="['pure-button','pure-button-primary','js-btn-crop']" v-bind:crop="false" url="./crop.php" extensions="png,gif,jpeg,jpg" v-on:imageuploaded="imageuploaded"></vue-core-image-upload>
+<vue-core-image-upload v-bind:class="['pure-button','pure-button-primary','js-btn-crop']" v-bind:crop="false" url="./crop.php" extensions="png,gif,jpeg,jpg"></vue-core-image-upload>
 ```
 
 [Demo] (http://vanthink-ued.github.io/vue-core-image-upload/upload.html)
@@ -85,8 +89,7 @@ Use Script(ES5)
 | maxheight | Number   |   150 | limit the height of your image you cropped|
 | inputAccept | string   |  'image/*' / 'image/jpg,image/jpeg,image/png' |  the image file of accept type |
 
-### events
-
+### $dispatch, events
 
 ``` js
 //finish image uload
@@ -107,9 +110,6 @@ imageuploading(res) {
 errorhandle(err) {
   console.error(err);
 }
-```
-``` html
-<vue-core-image-upload v-bind:crop="false" url="./crop.php"  v-on:imageuploaded="imageuploaded" v-on:imageuploaded="imageuploaded" v-on:errorhandle="func"></vue-core-image-upload>
 ```
 
 ### Server Crop Arguments
