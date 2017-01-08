@@ -129,3 +129,4 @@ If you crop a image , your crop will send a request to your server with some cro
 If you want to change the crop window style , you should write your own css files.
 
 ### MIT Liscense 
+
