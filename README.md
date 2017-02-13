@@ -8,6 +8,6 @@ Please go [vue-core-image-upload](https://github.com/Vanthink-UED/vue-core-image
 
 *It just gets a better name and all api keep consistent.*
 
-Thansk for your support. All issues have been moved [here](https://github.com/Vanthink-UED/vue-core-image-upload/issues).
+Thanks for your support. All issues have been moved [here](https://github.com/Vanthink-UED/vue-core-image-upload/issues).
 
 
