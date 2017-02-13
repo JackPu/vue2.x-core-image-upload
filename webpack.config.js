@@ -1,7 +1,7 @@
 const webpack = require( 'webpack' )
 
 module.exports = {
-  entry: './src/vue.core.image.upload.vue',
+  entry: './src/index',
   output: {
     path: './',
     filename: 'index.js',
